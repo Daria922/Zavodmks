@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./aboutus.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ТОВ «ЗАВОД-МКС» — виробник металоконструкцій у Миколаєві. Проєктування, виготовлення та монтаж металоконструкцій, лазерне різання, гнуття металу, токарні, фрезерні та зварювальні роботи.">
+  <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+    <title>ТОВ "ЗАВОД-МКС" - Про нас | Про нашу компанію | Послуги металургічного заводу | Миколаївський завод</title>
+     </head>
+    <body class="menu-closed">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Відкрити меню"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+  <aside class="sidebar">
+    <div class="logo">
+      ТОВ "ЗАВОД <br />
+      <span>- МКС"</span>
+    </div>
+
+    <div class="side-title">Навігація</div>
+
+    <nav>
+      <ul>
+      <a target="_blank" href="./aboutus.html">Про нас</a>
+      <a target="_blank" href="./news.html">Новини</a>
+      <a href="#contacts">Контакти</a>
+      </ul>
+    </nav>
+    <div class="sidebar-social">
+
+   <a href="viber://add?number=380675006970" class="viber-button" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3938/3938039.png" alt="Viber">
+    </a>
+
+    <a target="_blank" href="https://t.me/p_mks1">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Telegram_2019_Logo.svg/960px-Telegram_2019_Logo.svg.png" alt="Telegram">
+    </a>
+
+    
+
+
+</div>
+<a class="QRcode"><img width="100px" src="./image/favicon.svg" alt="QR code"></a>
+  </aside>
+  <main>
+      <section class="about-company">
+    <img src="./image/photo_2026-06-26_18-58-12.jpg" alt="Завод">
+
+    
+    <div class="about-text">
+        <h1>Про компанію</h1>
+
+        <p>
+            ТОВ «ЗАВОД-МКС» — сучасне підприємство,
+            яке спеціалізується на виготовленні
+            металоконструкцій та механічній обробці металу...
+        </p>
+
+        <p>
+            Ми виконуємо роботи будь-якої складності,
+            використовуючи сучасне обладнання та багаторічний досвід.
+        </p>
+    </div>
+</section>
+
+<section class="timeline">
+
+   <h2>Історія компанії</h2>
+
+<input type="range"
+       id="timeline"
+       min="0"
+       max="4"
+       value="0">
+
+<div class="years">
+    <span>2018</span>
+    <span>2020</span>
+    <span>2022</span>
+    <span>2024</span>
+    <span>2026</span>
+</div>
+
+<div id="history"></div>
+       <section class="contacts" id="contacts">
+      <div>
+        <h2>Контакти</h2>   
+
+        <div class="contact-list">
+          <p><b>Телефон: </b><a style="text-decoration: none;" href="tel:+380675006970"> +38 067 500 6970</a></p>
+          <p><b>Ел. Пошта: </b><a style="text-decoration: none;" href="mailto:p_mks@ukr.net">p_mks@ukr.net</a></p>
+          <p><b>Адреса: </b><a style="text-decoration: none;" href="https://maps.app.goo.gl/kvUd4vsqKeRuADbv7"> Місто Миколаїв, вул. Казарського, 2г</a></p>
+        </div>
+
+        <p class="social">
+          <a style="text-decoration: none;" href="#"></a>
+          <a style="text-decoration: none;" href="viber://add?number=380675006970">Viber</a>
+          <a style="text-decoration: none;" target="_blank" href="https://t.me/p_mks1">Telegram</a>
+        </p>
+      </div>
+
+      <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2721.8354422078733!2d32.0556218!3d46.98456669999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c5cb7e267bd727%3A0x16fc075659469d94!2z0KLQntCSICLQl9CQ0JLQntCUIC0g0JzQmtChIg!5e0!3m2!1sru!2sua!4v1783364056772!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      </div>
+    </section>
+</main>
+ <footer>
+    <div class="Logo"> 
+   @2026 ТОВ "ЗАВОД - МКС" — Усі права захищені!
+    </div>
+  </footer>
+<script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menuLinks = document.querySelectorAll("nav a");
+
+    function isMobile() {
+      return window.innerWidth <= 800;
+    }
+
+    function updateMenuButton() {
+      const isClosed = document.body.classList.contains("menu-closed");
+
+      toggle.textContent = isClosed ? "☰" : "×";
+      toggle.setAttribute("aria-expanded", String(!isClosed));
+      toggle.setAttribute(
+        "aria-label",
+        isClosed ? "Відкрити меню" : "Закрити меню"
+      );
+    }
+
+    function syncMenu() {
+      if (isMobile()) {
+        document.body.classList.add("menu-closed");
+      } else {
+        document.body.classList.remove("menu-closed");
+      }
+
+      updateMenuButton();
+    }
+
+    toggle.addEventListener("click", () => {
+      document.body.classList.toggle("menu-closed");
+      updateMenuButton();
+    });
+
+    menuLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (isMobile()) {
+          document.body.classList.add("menu-closed");
+          updateMenuButton();
+        }
+      });
+    });
+
+    window.addEventListener("resize", syncMenu);
+
+    syncMenu();
+
+/*TIMELINE*/
+   const history = [
+{
+    year:"12 грудня 2018",
+    text:"Заснування підприємства."
+},
+{
+    year:"2020",
+    text:"Відкриття нового виробничого цеху."
+},
+{
+    year:"2022",
+    text:"Закуплено нове обладнання."
+},
+{
+    year:"2024",
+    text:"Розширення виробництва."
+},
+{
+    year:"2026",
+    text:"Запуск лазерного комплексу."
+}];
+
+const slider = document.getElementById("timeline");
+const block = document.getElementById("history");
+
+function update(){
+    const item = history[slider.value];
+
+    block.innerHTML = `
+        <h2>${item.year}</h2>
+        <p>${item.text}</p>
+    `;
+}
+
+slider.addEventListener("input", update);
+
+update();
+
+/*ANIMATION*/
+function update(){
+
+    const item = history[slider.value];
+
+    block.classList.remove("show");
+
+    setTimeout(()=>{
+        block.innerHTML=`
+            <h2>${item.year}</h2>
+            <p>${item.text}</p>
+        `;
+        block.classList.add("show");
+    },150);
+
+    
+}
+
+
+  </script>
+    </body>
+   
